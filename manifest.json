@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "New Tab with Google Search",
+  "version": "1.0",
+  "description": "A chrome extension that replaces the new tab page with a google search box and auto complete feature.",
+  "chrome_url_overrides": {
+    "newtab": "dist/index.html"
+  },
+  "host_permissions": [
+    "https://www.google.com/complete/search*"
+  ]
+}

@@ -7,6 +7,8 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
+    "ant-design-vue": "4.x",
+    "axios": "^1.5.0",
     "vue": "^3.2.13"
   },
   "devDependencies": {
