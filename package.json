@@ -9,6 +9,8 @@
   "dependencies": {
     "ant-design-vue": "4.x",
     "axios": "^1.5.0",
+    "dayjs": "^1.11.9",
+    "lodash-es": "^4.17.21",
     "v-contextmenu": "^3.0.0",
     "vue": "^3.2.13"
   },

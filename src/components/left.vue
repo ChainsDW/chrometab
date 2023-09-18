@@ -1,14 +1,39 @@
 <template>
   <div style="display: flex; justify-content: end; margin-right: 50px">
     <Space direction="vertical">
-      <div class="cloud glass">
+      <div class="time glass">
+        <div style="font-size: 40px">{{ now }}</div>
+        <div style="font-size: 18px">
+          {{ week }}
+          {{ month }}
+          {{ date }}
+        </div>
       </div>
+      <Cloud></Cloud>
     </Space>
   </div>
 </template>
 
 <script lang="ts" setup>
-import {Space, Row, Col} from "ant-design-vue"
+import {Space, Row, Col, Button} from "ant-design-vue"
+import Cloud from "./cloud.vue"
+import dayjs from "dayjs";
+import {ref} from "vue"
+const now = ref()
+const weeks = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July',"August","September","October","November","December"]
+const week = ref()
+const month = ref()
+const date = ref()
+const UpdateNow = () => {
+  now.value = dayjs(new Date()).format("HH:mm")
+  week.value = weeks[new Date().getDay()]
+  month.value = months[new Date().getMonth()]
+  date.value = new Date().getDate()
+  setTimeout(UpdateNow, 60000)
+}
+UpdateNow()
+
 </script>
 
 <style scoped>
@@ -16,11 +41,23 @@ import {Space, Row, Col} from "ant-design-vue"
   color: white;
   overflow: hidden;
   background-color: rgba(0,0,0,0.2);
-  backdrop-filter: blur(10px)
+  backdrop-filter: blur(10px);
+  border-radius: 5px;
+}
+.time{
+  width: 250px;
+  padding: 20px;
+  text-align: center;
 }
 .cloud{
+  position: relative;
   width: 250px;
-  height: 100px;
+  padding: 20px;
+}
+.setting{
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 /*.cloud:before{*/
 /* content: "";*/
