@@ -1,7 +1,7 @@
 <template>
   <div class="cloud glass" @mouseenter="cloudSettingButtonShow = true" @mouseleave="cloudSettingButtonShow = false">
     <div class="setting" v-show="cloudSettingButtonShow">
-      <Button type="text" style="color: #c6c6c6" @click="cloudSettingShow = true">
+      <Button type="text" style="color: #c6c6c6" @click="cloudSettingShow = !cloudSettingShow">
         <template #icon>
           <SettingOutlined />
         </template>
@@ -10,7 +10,7 @@
     <iframe v-if="!cloudSettingShow" width="300" scrolling="no" height="60" frameborder="0" allowtransparency="true" :src="`https://i.tianqi.com?c=code&id=79&color=%23FFFFFF&icon=1&py=${location}&site=12`"></iframe>
     <div v-else>
       <AutoComplete v-model:value="locationtmp" :options="options" style="width: 200px" placeholder="Select Location" @search="onSelect"></AutoComplete>
-      <div style="text-align: center;margin-top: 5px">
+      <div style="text-align: center;margin-top: 8px">
         <Button ghost @click="saveLocation" size="small">save</Button>
       </div>
     </div>

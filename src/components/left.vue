@@ -10,6 +10,7 @@
         </div>
       </div>
       <Cloud></Cloud>
+      <Quote></Quote>
     </Space>
   </div>
 </template>
@@ -17,6 +18,7 @@
 <script lang="ts" setup>
 import {Space, Row, Col, Button} from "ant-design-vue"
 import Cloud from "./cloud.vue"
+import Quote from "./quote.vue"
 import dayjs from "dayjs";
 import {ref} from "vue"
 const now = ref()
