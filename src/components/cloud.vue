@@ -1,7 +1,7 @@
 <template>
   <div class="cloud glass" @mouseenter="cloudSettingButtonShow = true" @mouseleave="cloudSettingButtonShow = false">
     <div class="setting" v-show="cloudSettingButtonShow">
-      <Button type="text" style="color: #c6c6c6" @click="cloudSettingShow = !cloudSettingShow">
+      <Button type="text" style="color: #c6c6c6" shape="circle" @click="cloudSettingShow = !cloudSettingShow">
         <template #icon>
           <SettingOutlined />
         </template>

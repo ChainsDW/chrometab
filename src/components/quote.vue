@@ -3,7 +3,7 @@
     <div style="font-style: italic;">"{{ quote.quote }}"</div>
     <div style="text-align: right; line-height: 25px;">—— {{ quote.origin }}</div>
     <div class="next-quote" v-show="nextButton">
-      <Button shape="circle" type="text" style="color: #c6c6c6" ghost size="small" @click="getRandomQuote">
+      <Button shape="circle" type="text" style="color: #c6c6c6" size="small" @click="getRandomQuote">
         <template #icon>
           <RightCircleOutlined />
         </template>
@@ -48,4 +48,5 @@ getRandomQuote()
   left: 0;
   text-align: center;
 }
+
 </style>

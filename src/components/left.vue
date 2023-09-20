@@ -11,6 +11,7 @@
       </div>
       <Cloud></Cloud>
       <Quote></Quote>
+      <Note></Note>
     </Space>
   </div>
 </template>
@@ -19,6 +20,7 @@
 import {Space, Row, Col, Button} from "ant-design-vue"
 import Cloud from "./cloud.vue"
 import Quote from "./quote.vue"
+import Note from "./note.vue"
 import dayjs from "dayjs";
 import {ref} from "vue"
 const now = ref()
