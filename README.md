@@ -1,19 +1,17 @@
-# chrometab
+# 谷歌浏览器的新窗口插件
 
-## Project setup
+## 下载&&安装
+- 打包
 ```
 yarn install
+yarn run build
 ```
+- 安装
+谷歌浏览器打开扩展->点击加载已解压的扩展程序->选择chrometab目录
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+## 效果
 
-### Compiles and minifies for production
-```
-yarn build
-```
+![image](https://github.com/ChainsDW/chrometab/assets/37797813/5a3894fd-a21d-484f-afe5-6a95406870a1)
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+- 支持 bing和google搜索
+- 右边为知乎热榜
